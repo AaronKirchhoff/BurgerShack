@@ -7,6 +7,7 @@ const groceryStore = {
   carboydrates: {wheat: ['pasta', 'bread', 'doughnuts'], corn: "polenta" }
 }
 
+//   return obj.hasOwnProperty([str]) ? delete obj[str] : "Object does not have property"
 function finder (obj, str) {
   if (obj.hasOwnProperty([str])) {
     delete obj[str]
@@ -16,9 +17,31 @@ function finder (obj, str) {
   return obj
 }
 
-console.log(finder(groceryStore, 'dairy'));
+// console.log(finder(groceryStore, 'dairy'));
 // should delete meat property
-console.log(finder(groceryStore, 'candy'))
+// console.log(finder(groceryStore, 'candy'))
 // should print "Object does not have that property"
 groceryStore.seafood = "shrimp"
-console.log(groceryStore)
+// console.log(groceryStore)
+
+
+// 3
+const person1 = {
+	name: "Bob",
+	age: 12,
+	occupation: "student",
+	friends: ["alice", "bill", "carol"],
+	interests: { music: "gregorian  chant", sports: ["shuffle board", "ping pong", "roller derby"]}
+}
+
+function finder2(obj, str) {
+  if (obj["occupation"] == str) {
+    return obj['interests'].sports[2]
+  } else {
+    return obj['interests'].music
+  }
+}
+
+console.log(finder2(person1, "student"));
+console.log(finder2(person1, "professor"))
+
