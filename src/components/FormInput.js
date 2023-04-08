@@ -7,6 +7,8 @@ function FormInput(str){
   const [username, setUsername] = useState('')
   console.log('name', username)
   const [password, setPassword] = useState('')
+  const test = useState('')
+  console.log('bananas',test[0])
   const myButton = () => {
     alert('Hello, World!');
   };

@@ -1,5 +1,5 @@
 
-const groceryStore = {
+export const groceryStore = {
   dairy: "milk",
   meat: "beef",
   vegetable: "broccoli",
@@ -7,13 +7,15 @@ const groceryStore = {
   carboydrates: {wheat: ['pasta', 'bread', 'doughnuts'], corn: "polenta" }
 }
 
-//   return obj.hasOwnProperty([str]) ? delete obj[str] : "Object does not have property"
+  // return obj.hasOwnProperty([str]) ? delete obj[str] : "Object does not have property"
 function finder (obj, str) {
-  if (obj.hasOwnProperty([str])) {
-    delete obj[str]
-  } else {
-    return "Object does not have property"
-  }
+  obj.hasOwnProperty([str]) ? delete obj[str] : console.log("Object does not have property")
+
+  // if (obj.hasOwnProperty([str])) {
+  //   delete obj[str]
+  // } else {
+  //   return "Object does not have property"
+  // }
   return obj
 }
 
@@ -34,11 +36,12 @@ const person1 = {
 	interests: { music: "gregorian  chant", sports: ["shuffle board", "ping pong", "roller derby"]}
 }
 
+// if the property of the object is being carried in a variable, we have to put it in brackets. but if the object is represented by a variable, you can still use the . dot notation obj.occupation
 function finder2(obj, str) {
-  if (obj["occupation"] == str) {
-    return obj['interests'].sports[2]
+  if (obj.occupation == str) {
+    return obj.interests.sports[2]
   } else {
-    return obj['interests'].music
+    return obj.interests.music
   }
 }
 
