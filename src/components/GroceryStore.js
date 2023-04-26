@@ -1,5 +1,6 @@
 import React from 'react'
 import { groceryStore } from './JSObjectPractice'
+import { store } from './JSObjectPractice'
 
 const GroceryStore = () => {
   console.log(groceryStore)
@@ -19,6 +20,14 @@ const GroceryStore = () => {
       <ul>
         {groceryStore.carboydrates.wheat.map(() => {})}
       </ul>
+      <h1>pizza from SAP interview</h1>
+      <p>Pizzas: {store.pizzas[0].id}, {store.pizzas[1].toppings.join(', ')}</p>
+      <p>my Pizzas: {store.pizzas[2].toppings.join(', ')}</p>
+      <ol>
+        {store.pizzas[2].toppings.map((item) => {
+          return <li>{item}</li>
+        })}
+      </ol>
 
     </div>
   )

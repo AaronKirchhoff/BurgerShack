@@ -5,7 +5,50 @@ export const groceryStore = {
   vegetable: "broccoli",
   fruit: ["strawberry", "mango", "peach"],
   carboydrates: {wheat: ['pasta', 'bread', 'doughnuts'], corn: "polenta" }
-}
+};
+
+export const store = {
+  pizzas: [
+    {
+      id: 1,
+      customer: 1,
+      base: "marinara",
+      toppings: ["cheese", "pineapple", "pepperoni"]
+    },
+    {
+      id: 2,
+      customer: 1,
+      base: "marinara",
+      toppings: ["cheese", "bacon"]
+    },
+    {
+      id: 3,
+      customer: 2,
+      base: "marinara",
+      toppings: ["cheese", "spinach", "pepperoni"]
+    },
+    {
+      id: 4,
+      customer: 3,
+      base: "marinara",
+      toppings: ["cheese", "mushrooms", "ham"]
+    }
+  ],
+  customers: [
+    {
+      id: 1,
+      name: "Sabrina",
+      address: "665 SE Salem RD Riverdale, MA"
+    },
+    {
+      id: 2,
+      name: "Salem",
+      address: "665 SE Salem RD Riverdale, MA"
+    }
+  ]
+};
+
+store.pizzas[2].toppings = ['pepperoni', 'sausage', 'mushrooms', 'anchovies', 'apple']
 
   // return obj.hasOwnProperty([str]) ? delete obj[str] : "Object does not have property"
 function finder (obj, str) {
