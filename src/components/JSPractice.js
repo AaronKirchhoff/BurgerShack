@@ -1,9 +1,9 @@
 /* chat GPT asked me to write a function that takes in a string and return the string in reverse order. then I exported the function so I could read it elsehwere in my app*/
 
-// export function Reverse(str){
-//   return str.split('').reverse().join('')
-// };
-// console.log(Reverse('Hello'));
+export function Reverse(str){
+  return str.split('').reverse().join('')
+};
+console.log(Reverse('Hello'));
 
 // export function EvenSum(arr) {
 //   let sum = 0
@@ -51,7 +51,7 @@ function mostCommonChar (str){
   let big = Math.max(...thisArr)
   return Object.keys(myObj).find(key => myObj[key] === big);
 }
-// console.log(mostCommonChar('abracadabra'))
+console.log(mostCommonChar('abracadabra'))
 
 
 function evenNums (arr){
